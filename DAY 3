@@ -1,0 +1,7 @@
+Chat Application using SUB-PUB
+
+To subscribe channel
+SUBSCRIBE channel "channel_name"
+
+To Publish channel
+PUBLISH channel "message"
