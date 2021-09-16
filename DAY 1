@@ -1,0 +1,26 @@
+Redis Installation
+commands
+SET key value
+GET key
+ttl key
+KEYS *
+DEL key
+FLUSHALL
+EXISTS key
+expire key time
+
+Arrays
+LPUSH array value
+RPUSH array value
+LRANGE array start stop
+LPOP array
+RPOP array
+
+Sets 
+SADD myset value
+
+For Object/Hash
+HSET key field value
+HSET key field
+HSETALL key
+HEXISTS key field
