@@ -5,3 +5,5 @@ SET
 postgres=# CREATE TABLE students(studentid int,studentname varchar(255));
 CREATE TABLE
 postgres=#
+ALTER TABLE students RENAME TO infostudents;
+ALTER TABLE infostudents ADD dob date;
