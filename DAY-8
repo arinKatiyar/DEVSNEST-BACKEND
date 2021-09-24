@@ -1,16 +1,40 @@
-Express documentation
+Express documentation. 
 
-app.use() to use a middleware before every api call
+const express = require('express')
+const app = express()
+ 
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+ Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+ 
+app.listen(3000) 
 
+Creates an Express application. The express() function is a top-level function exported by the express module.
+
+const express = require('express')
+const app = express()
 Get is stored in cache.Hence not used for passwords.
 
-Middlewares mostly used for authentication and login e.g.
 
-app.get("/", (req,res,next) => { if(req.query.admin === 'true'){ next(); } else { res.status(401).send("should be admin"); } })
 
-check the get call on localhost:5000/?admin=true;
+
+
+
+
 
 express.use(express.static('public'))
 
 since, body parser is depricated, it is added ultimately to express app.use(express.urlencoded()); app.use(bodyparser.json());
+
+
+Middlewares mostly  used for authentication and login e.g.
+
+app.get("/", (req,res,next) => { if(req.query.admin === 'true'){ next(); } else { res.status(401).send("should be admin"); } })
+
+
+
+
+
+
 
