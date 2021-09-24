@@ -11,7 +11,7 @@ app.get("/withjson", (req, res) => {
 })
 app.get("/status", (req, res) => {
     res.status(200);   
-    res.send("hemlo");
+    res.send("hello");
 })
 
 
