@@ -1,0 +1,21 @@
+const express = require("express");
+const User = require("./model");
+
+const app = express();
+
+app.get("/", (req, res) => {
+    res.send("Hello postgrss");
+});
+
+const createUser = async (req, res) => {
+    const newUser = new User({fullName:"XYZ", email:"XYZ@gmail.com", password: "XYZ@321"});
+    const savedUser = await newUser.save();
+    console.log("SAVED");
+    res.status(201).json(savedUser);
+}
+
+app.get("/create", createUser);
+
+app.listen(3000, (err) => {
+    console.log("Connection established on PORT 3000");
+});
