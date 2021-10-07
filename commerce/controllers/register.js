@@ -51,7 +51,7 @@ const registerSuperAdmin = async (req, res) => {
         email: email.toLowerCase(),
         password: hash,
         fullName: "Arin",
-        role: "Student",
+        role: "Super-Admin",
       });
       const savedUser = await newUser.save();
       req.session.User = savedUser;
